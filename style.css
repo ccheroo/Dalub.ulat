@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fdf6e3,#f7edd7,#fffaf0);
+    color:#3b2f2f;
+}
+
+header{
+    background:linear-gradient(135deg,#8B4513,#A0522D);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    border-bottom:8px solid #D4A373;
+}
+
+header h1{
+    font-size:2.8rem;
+    margin-bottom:10px;
+}
+
+header p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+main{
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.card{
+    width:100%;
+    max-width:750px;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.15);
+    border-top:10px solid #A0522D;
+}
+
+.card h2{
+    text-align:center;
+    color:#8B4513;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:2px solid #d9c5aa;
+    border-radius:10px;
+    font-size:15px;
+    transition:.3s;
+    background:#fffdf9;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#8B4513;
+    box-shadow:0 0 10px rgba(139,69,19,.2);
+}
+
+textarea{
+    resize:vertical;
+}
+
+.counter{
+    text-align:right;
+    margin-top:6px;
+    color:#777;
+    font-size:13px;
+}
+
+.notice{
+    margin-top:25px;
+    background:#FFF7E8;
+    border-left:6px solid #D4A373;
+    padding:18px;
+    border-radius:10px;
+}
+
+.notice h3{
+    color:#8B4513;
+    margin-bottom:10px;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    background:#8B4513;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#6F3C16;
+    transform:translateY(-2px);
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+.success{
+    display:none;
+    margin-top:30px;
+    text-align:center;
+    background:#e9ffe9;
+    border:2px solid #4CAF50;
+    color:#2E7D32;
+    padding:25px;
+    border-radius:12px;
+}
+
+.success h2{
+    margin:10px 0;
+}
+
+.hidden{
+    display:none;
+}
+
+footer{
+    margin-top:30px;
+    text-align:center;
+    padding:25px;
+    color:#6b4d3a;
+    background:#F4E4C1;
+    border-top:3px solid #D4A373;
+}
+
+/* Filipino-inspired woven accent */
+
+.card::before{
+    content:"";
+    display:block;
+    height:10px;
+    border-radius:8px;
+    margin-bottom:25px;
+    background:repeating-linear-gradient(
+        45deg,
+        #A0522D 0px,
+        #A0522D 10px,
+        #D4A373 10px,
+        #D4A373 20px
+    );
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2rem;
+}
+
+.card{
+    padding:22px;
+}
+
+button{
+    font-size:16px;
+}
+
+}
