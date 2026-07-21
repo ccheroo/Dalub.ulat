@@ -20,6 +20,8 @@
     </p>
 </header>
 
+   <!-- Success Popup -->
+    
 <main>
 
 <section class="card">
@@ -106,12 +108,13 @@ placeholder="Isulat nang detalyado ang iyong ulat..."></textarea>
 <span id="count">0</span>/2000
 </div>
 
-<label>Maglakip ng Larawan (Opsyonal)</label>
+<label>Link ng Larawan o Ebidensya (Opsyonal)</label>
 
 <input
-type="file"
-name="attachment"
-accept=".jpg,.jpeg,.png,.pdf">
+type="url"
+name="Link ng Larawan"
+placeholder="https://drive.google.com/file/d/..."
+>
 
 <div class="notice">
 
@@ -150,6 +153,31 @@ ng pamunuan ng Dalubwikaan.
 
 </section>
 
+<!-- Success Popup -->
+<div id="popup" class="popup">
+
+    <div class="popup-content">
+
+        <div class="popup-icon">✅</div>
+
+        <h2>Matagumpay!</h2>
+
+        <p>
+            Matagumpay nang naipadala ang iyong ulat.
+            <br><br>
+            <strong>Sinusuri na ng mga opisyales ang nasabing ulat o reklamo.</strong>
+            <br><br>
+            Maraming salamat sa iyong pakikiisa sa pagpapanatili ng maayos, ligtas, at makatarungang samahan.
+        </p>
+
+        <button id="closePopup">
+            Isara
+        </button>
+
+    </div>
+
+</div>
+    
 </main>
 
 <footer>
