@@ -29,6 +29,7 @@
 <h2>Magpasa ng Ulat</h2>
 
 <form
+id="reportForm"
 action="https://api.web3forms.com/submit"
 method="POST"
 enctype="multipart/form-data">
@@ -116,6 +117,12 @@ name="Link ng Larawan"
 placeholder="https://drive.google.com/file/d/..."
 >
 
+<p style="font-size:14px; color:#666; margin-top:8px; line-height:1.5;">
+📷 Kung may larawan o dokumentong nais ilakip, i-upload muna ito sa
+<strong>Google Drive</strong>, pagkatapos ay i-click ang
+<strong>Share → Anyone with the link → Viewer</strong>, at idikit ang link dito.
+</p>
+
 <div class="notice">
 
 <h3>🔒 Paalala</h3>
@@ -165,13 +172,27 @@ ng pamunuan ng Dalubwikaan.
         <p>
             Matagumpay nang naipadala ang iyong ulat.
             <br><br>
-            <strong>Sinusuri na ng mga opisyales ang nasabing ulat o reklamo.</strong>
+
+            <strong>Reference Number</strong>
+
+            <br>
+
+            <span id="referenceNumber"></span>
+
             <br><br>
-            Maraming salamat sa iyong pakikiisa sa pagpapanatili ng maayos, ligtas, at makatarungang samahan.
+
+            Sinusuri na ng mga opisyales ang nasabing ulat o reklamo.
+
+            <br><br>
+
+            Maraming salamat sa iyong pakikiisa sa Dalubwikaan.
+
         </p>
 
         <button id="closePopup">
+
             Isara
+
         </button>
 
     </div>
@@ -190,6 +211,7 @@ Dalub-Ulat Reporting System
 
 </footer>
 
+<script src="script.js"></script>
 
 </body>
 </html>
