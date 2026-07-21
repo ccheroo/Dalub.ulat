@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalub-Ulat</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>📜 Dalub-Ulat</h1>
+    <p>
+        Isang ligtas at kompidensiyal na daluyan ng mga ulat, reklamo,
+        mungkahi, at hinaing para sa kapakanan ng lahat.
+    </p>
+</header>
+
+<main>
+
+<section class="card">
+
+<h2>Magpasa ng Ulat</h2>
+
+<form id="reportForm"
+action="https://api.web3forms.com/submit"
+method="POST"
+enctype="multipart/form-data">
+
+<input type="hidden"
+name="access_key"
+value="YOUR_WEB3FORMS_ACCESS_KEY">
+
+<input type="hidden"
+name="subject"
+value="Bagong Ulat mula sa Dalub-Ulat">
+
+<input type="hidden"
+name="from_name"
+value="Dalub-Ulat">
+
+<input type="checkbox"
+name="botcheck"
+class="hidden"
+style="display:none;">
+
+<label>Pangalan (Opsyonal)</label>
+
+<input
+type="text"
+name="Pangalan"
+placeholder="Maaaring iwanang blangko">
+
+<label>Email (Opsyonal)</label>
+
+<input
+type="email"
+name="Email"
+placeholder="juan@email.com">
+
+<label>Kategorya</label>
+
+<select
+name="Kategorya"
+required>
+
+<option value="">Pumili</option>
+
+<option>Reklamo</option>
+
+<option>Suhestiyon</option>
+
+<option>Paglabag</option>
+
+<option>Pang-aabuso</option>
+
+<option>Diskriminasyon</option>
+
+<option>Hindi Maayos na Serbisyo</option>
+
+<option>Iba pa</option>
+
+</select>
+
+<label>Opisina / Tao na Sangkot (Opsyonal)</label>
+
+<input
+type="text"
+name="Sangkot"
+placeholder="Hal. Finance Committee">
+
+<label>Ang Iyong Ulat</label>
+
+<textarea
+id="report"
+name="Ulat"
+rows="8"
+maxlength="2000"
+required
+placeholder="Isulat nang detalyado ang iyong ulat..."></textarea>
+
+<div class="counter">
+<span id="count">0</span>/2000
+</div>
+
+<label>Maglakip ng Larawan (Opsyonal)</label>
+
+<input
+type="file"
+name="attachment"
+accept=".jpg,.jpeg,.png,.pdf">
+
+<div class="notice">
+
+<h3>🔒 Paalala</h3>
+
+<p>
+
+Ang lahat ng ulat ay ituturing na
+kompidensiyal.
+
+Mangyaring maging tapat at magbigay
+lamang ng makatotohanang impormasyon.
+
+</p>
+
+</div>
+
+<button type="submit">
+
+📨 Ipasa ang Ulat
+
+</button>
+
+</form>
+
+<div id="success" class="success hidden">
+
+✅
+
+<h2>Maraming Salamat!</h2>
+
+<p>
+
+Natanggap na ang iyong ulat.
+
+Makaaasa kang ito ay rerepasuhin
+ng pamunuan ng Dalubwikaan.
+
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+© 2026 Dalubwikaan
+
+<br>
+
+Dalub-Ulat Reporting System
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
