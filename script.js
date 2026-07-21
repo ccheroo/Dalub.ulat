@@ -1,66 +1,39 @@
-// Character Counter
+const form = document.getElementById("reportForm");
 const report = document.getElementById("report");
 const count = document.getElementById("count");
+const success = document.getElementById("success");
 
-if (report && count) {
-    report.addEventListener("input", () => {
+if(report){
+    report.addEventListener("input",()=>{
         count.textContent = report.value.length;
     });
 }
 
-// Form Submission
-const form = document.getElementById("reportForm");
-const success = document.getElementById("success");
+form.addEventListener("submit", async(e)=>{
 
-if (form) {
+    e.preventDefault();
 
-    form.addEventListener("submit", async function(e) {
+    const formData = new FormData(form);
 
-        e.preventDefault();
-
-        const button = form.querySelector("button");
-
-        const originalText = button.innerHTML;
-
-        button.disabled = true;
-        button.innerHTML = "⏳ Ipinapadala...";
-
-        const data = new FormData(form);
-
-        try{
-
-            const response = await fetch(form.action,{
-                method:"POST",
-                body:data
-            });
-
-            if(response.ok){
-
-                form.reset();
-
-                count.textContent="0";
-
-                success.style.display="block";
-
-                success.scrollIntoView({
-                    behavior:"smooth"
-                });
-
-            }else{
-
-                alert("Hindi naipadala ang ulat. Pakisubukang muli.");
-
-            }
-
-        }catch(error){
-
-            alert("May problem sa koneksyon. Pakisubukang muli.");
-
-        }
-
-        button.disabled=false;
-        button.innerHTML=originalText;
-
+    const response = await fetch(form.action,{
+        method:"POST",
+        body:formData
     });
 
-}
+    const result = await response.json();
+
+    console.log(result);
+
+    if(result.success){
+
+        success.style.display="block";
+        form.reset();
+        count.textContent="0";
+
+    }else{
+
+        alert(result.message);
+
+    }
+
+});
